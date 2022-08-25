@@ -1,4 +1,49 @@
 .card {
     border: solid 1px 
     #D58C51;
+    height: 552px;
+    display: grid;
+    grid-template-rows: 55% 45%;
+    
+}
+
+.card:hover{
+    color: #D58C51;
+    
+}
+.card:hover svg{
+    fill:#D58C51;
+    
+}
+
+.card__preview-wrap {
+    text-align: center;
+    margin: 40px 0px 0px 0px;
+}
+
+.card__text-wrap {
+    margin: 0px 0px 0px 25px;
+    height: 210px;
+    display: grid;
+    grid-template-rows: 50% 45% 5%;
+}
+
+.card__add-wrap {
+    display: flex;
+    align-items: baseline;
+    
+}
+.card__add-button {
+    width: 50%;
+    text-align: right;
+    margin: 0px 20px 10px 0px;
+    padding: 0px 0px 20px 0px;
+    
+}
+.card__price {
+    width: 50%;
+    margin: 0px 0px 20px 0px;
+}
+.card__add-button svg:hover{
+fill:#D58C51;
 }

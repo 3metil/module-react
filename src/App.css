@@ -12,6 +12,8 @@
 }
  .header {
   margin-bottom: 80px;
+  margin: 0px 0px 0px 15px;
+  padding: 20px 0px 0px 0px;
  }
 .menu {
   display: flex;
@@ -21,6 +23,7 @@
   width: 95vw;
   row-gap: 35px;
   column-gap: 35px;
+  margin: 0 auto;
 }
 
 .menu .card {
