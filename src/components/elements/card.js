@@ -1,10 +1,10 @@
 import './card.css';
 
-function Card({url, title, description, price, weight}) {
+function Card({img, title, description, price, weight}) {
     return (
         <div className="card">
         <div className="card__preview-wrap">
-        <img className='card-preview' src={url} alt="" />
+        <img className='card-preview' src={img} alt="" />
         </div>
         <div className="card__text-wrap">
         <h2 className="card__title">{title}</h2>

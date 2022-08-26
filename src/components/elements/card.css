@@ -7,6 +7,33 @@
     
 }
 
+.header {
+    display: flex;
+}
+
+.header h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 31px;
+}
+
+.menu__basket {
+    width: 60vw;
+    justify-content: flex-end;
+    display: flex;
+    height: 100%;
+    
+}
+.basket-text {
+    color: #000;
+    display: flex;
+    align-items: center;
+    margin: 0px 20px 0px 0px;
+}
+.basket-text:hover {
+    color: #ffffff
+}
 .card:hover{
     color: #D58C51;
     
@@ -19,7 +46,10 @@
 .card__preview-wrap {
     text-align: center;
     margin: 40px 0px 0px 0px;
+
 }
+
+
 
 .card__text-wrap {
     margin: 0px 0px 0px 25px;
