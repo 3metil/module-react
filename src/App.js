@@ -1,27 +1,20 @@
 import React from 'react';
 import './App.scss';
 import Btn from './components/ui/Button.js'
-
+import {Col, Container, Nav, Row} from "react-bootstrap";
+import {Link, BrowserRouter} from "react-router-dom";
 import Products from './pages/Products';
 import Basket from './pages/Basket'
+import AppRouter from "./components/approuter/AppRouter"
+import Header from './pages/Header'
+
 function App() {
 
-const BtnPlus = React.createRef()
-
-
-
-const handlePlusCount = () => {
-  
-  console.log(BtnPlus)
-}
-const handleMunusCount = () => {
-  
-  
-}
   return (
  <div>
-  {/* <Products /> */}
-  <Basket />
+        <BrowserRouter>
+        <AppRouter/>
+        </BrowserRouter>
  </div>
   );
 }
