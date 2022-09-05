@@ -1,5 +1,6 @@
 import './Basket.scss'
 // import MenuPage from './pages/MenuPage/MenuPage';
+import {Link} from "react-router-dom";
 
 const list = [
   {
@@ -103,7 +104,7 @@ return(
 </div>
 <div className={'basketCard__action'}>
   <span className={'basketCard__price'}>{list.price} Р</span>
-  <button className={'basketCard__button'}>Х</button>
+  <button className={'basketCard__button'}><img src='../images/deleteElement.svg'></img></button>
 </div>
 
     </li>
@@ -111,12 +112,13 @@ return(
 }
       </ul>
   </main> 
-
+<div className='basket__footerLine'><hr></hr></div>
 <footer className={'basket__footer'}>
 <h2 className ={'basket__price'}>Заказ на сумму:<span> {cp} P</span></h2>
 <div className={'basket__wrap'}>
     
     <button className={'basket__button'}>Оформить заказ</button>
+    <p className={'basket__buttonBack'}><Link to='/'>Назад к выбору</Link></p>
 </div>
   </footer>
 

@@ -2,12 +2,12 @@ import React from 'react';
 import {Route, Routes} from "react-router-dom";
 import Products from '../../pages/Products'
 import Basket from '../../pages/Basket'
-import Header from '../../pages/Header'
+
 
 const AppRouter = () => {
     return (
         <div>
-        <Header />
+        {/* <Header /> */}
         <Routes>
             <Route path={'/'} element={<Products/>}/>
             <Route path={'/add'} element={<Basket/>}/>
