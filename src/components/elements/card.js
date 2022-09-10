@@ -1,5 +1,6 @@
 import './card.css';
 
+
 function Card({img, title, description, price, weight, handleClick}) {
     return (
         <div className="card">
@@ -22,7 +23,9 @@ function Card({img, title, description, price, weight, handleClick}) {
         <path d="M20.3569 14.8214L9.28551 14.8213" stroke="white" stroke-width="2" stroke-linecap="round"/>
 </svg></div></div>
         </div></div>
+
     );
+
 }
 
 export default Card;

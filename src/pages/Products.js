@@ -1,26 +1,19 @@
 import Card from '../components/elements/card.js'
 import {products} from '../menuList.js'
 import {Link} from "react-router-dom";
+import Header from '../header/Header.jsx'
+function addProductToBasket(price) {
+  console.log(price)
+}
 
+function Products ({basketCounter, basketSum}) {
 
-
-function Products () {
-  // const sum = 1200
-  // const addPriceProduct = () => {}  
-  let sumPrices = []
   
   return (
 
       <main className="main">
       <div className="container">
-      <header className="header">
-
-        <h1>НАША ПРОДУКЦИЯ</h1>
-      <div className="menu__basket"><Link to='/add'><img src='../images/basket.svg'></img></Link>
-
-</div>
-      </header>
-
+      <Header/>
       <div className="menu">
         {products.map(key => {
         return ( 
@@ -31,7 +24,7 @@ function Products () {
                 description={key.description}
                 price={key.price}  
                 weight={key.weight}
-                // handleClick={addPriceProduct}
+                handleClick={addProductToBasket(key.price)}
                  />
         )
 })}
@@ -42,8 +35,7 @@ function Products () {
       </div>
     </main>
     )
-
-    
+ 
 }
 
 export default Products;
