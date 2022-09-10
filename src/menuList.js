@@ -1,3 +1,14 @@
+import {useParams} from 'react-router-dom'
+import {useSelector} from 'react-redux'
+
+const ProductItem = () => {
+  const params = useParams()
+  const id = params.id - 1
+  const cards = useSelector(state=> state.cards)
+  const product = cards[id]
+  return id
+}
+
 export const products = [
   {
     "id": "1",

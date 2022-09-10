@@ -1,8 +1,21 @@
 import './card.css';
+import {useDispatch} from 'react-redux'
+import {useSelector} from 'react-redux'
 
 
-function Card({img, title, description, price, weight, handleClick}) {
+
+
+function Card({id, img, title, description, price, weight}) {
+    const dispatch = useDispatch()  
+    const addCart = (id) => {
+        
+        console.log(id)
+        dispatch({type: 'ADD_CART', id})
+
+    }  
     return (
+    
+        
         <div className="card">
         <div className="card__preview-wrap">
         <img className='card-preview' src={img} alt="" />
@@ -16,7 +29,7 @@ function Card({img, title, description, price, weight, handleClick}) {
         
         <div className="card__add-wrap">
         <div className="card__price">{price} / {weight}</div>
-        <div className="card__add-button" onClick={handleClick}>
+        <div className="card__add-button" onClick={() => addCart(id)}>
         <svg width="30" height="30" viewBox="0 0 30 30" fill="#323232" xmlns="http://www.w3.org/2000/svg">
         <circle cx="15" cy="15" r="15" />
         <path d="M15 9.28564V20.3571" stroke="white" stroke-width="2" stroke-linecap="round"/>
