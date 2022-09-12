@@ -10,13 +10,14 @@ const cartSlice = createSlice({
     },
     reducers: {
         addProduct(state, action) {
-        console.log('addProduct')
+        // console.log('addProduct')
+        state.cart.push(action.payload)
         }
     }
 
 })
 
-export const { addproduct } = cartSlice.actions
+export const { addProduct } = cartSlice.actions
 
 export default cartSlice.reducer
 

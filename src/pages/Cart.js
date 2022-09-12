@@ -1,4 +1,4 @@
-import './Basket.scss'
+import './Cart.scss'
 // import MenuPage from './pages/MenuPage/MenuPage';
 import {Link} from "react-router-dom";
 // import {useDispatch} from 'react-redux'
@@ -7,7 +7,7 @@ import {useSelector} from 'react-redux'
 // import {useParams} from 'react-router-dom'
 // let state = []
 
-  
+
 
 
 
@@ -28,10 +28,25 @@ function Cart() {
 const cart = useSelector(state => state.cart.cart)
 
 return(
+
+  
+  
 <div className={"basket"}>
   <header>
     <h1 className={"basket__title"}>КОРЗИНА С ВЫБРАННЫМИ ТОВАРАМИ</h1>
   </header>
+
+  
+{cart.map(item => {
+const {img, title, price} = item
+return (
+  <div className='card'>{img} </div>,
+  <div>{title}</div>,
+  <div>{price}</div>
+ 
+)
+
+})}
 
   {/* {product.length != 0 ? product.map(product =>
                 <>
