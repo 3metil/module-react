@@ -8,7 +8,9 @@ import {Button} from "react-bootstrap"
 
 
 function Products ({prop}) {
+const addPriceProduct =(price) => {
 
+}
 
   return (
 
@@ -25,7 +27,8 @@ function Products ({prop}) {
                 description={key.description}
                 price={key.price}  
                 weight={key.weight}
-                
+                // handleClick={(e) => addPriceProduct(price)
+                // (e)}
                  />
 
                  
