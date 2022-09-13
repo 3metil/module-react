@@ -26,6 +26,10 @@ body {
     &__price-wrap {
         display: flex;
     }
+    &__delete-button {
+        cursor: pointer;
+
+    }
 }
 
 

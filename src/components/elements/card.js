@@ -1,4 +1,4 @@
-import './card.css';
+import './card.scss';
 import {useDispatch} from 'react-redux'
 import {useSelector} from 'react-redux'
 import {addProduct} from '../../store/reducers/index'
