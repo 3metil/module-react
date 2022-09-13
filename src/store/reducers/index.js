@@ -10,30 +10,19 @@ const cartSlice = createSlice({
     },
     reducers: {
         addProduct(state, action) {
-        // console.log('addProduct')
+        
         state.cart.push(action.payload)
+        },
+        removeProduct(state, payload) {
+        state.cart.filter(state != payload)
         }
     }
 
 })
 
 export const { addProduct } = cartSlice.actions
+export const { removeProduct } = cartSlice.actions
 
 export default cartSlice.reducer
 
-// const initialState = {
-//     products,
-//     cart: []
-// }
 
-// export const reducer = (state = initialState, action) => {
-//     switch (action.type) {
-//         case 'ADD_CART':
-//             return {...state, cart: [...state.cart, state.cards.find(product => product.id === action.id)]}
-//         case 'REM_CART':
-//             return {...state, cart: state.cart.filter(product => product.id !== action.id)}
-//         default:
-//             return state
-
-//     }
-// }

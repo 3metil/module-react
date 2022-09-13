@@ -33,11 +33,6 @@ function App() {
 
   return (
  <div>
-{/* 
-
-      {count} <br />
-      <button onClick={handlePlus}>PLUS</button>
-      <button onClick={handleMinus}>MINUS</button> */}
 
         <BrowserRouter>
          <AppRouter/>

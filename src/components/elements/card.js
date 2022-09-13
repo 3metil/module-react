@@ -2,6 +2,7 @@ import './card.css';
 import {useDispatch} from 'react-redux'
 import {useSelector} from 'react-redux'
 import {addProduct} from '../../store/reducers/index'
+import {v4 as uuidv4} from 'uuid'
 
 
 
@@ -9,8 +10,9 @@ function Card({id, img, title, description, price, weight}) {
     const dispatch = useDispatch()  
 
     let item = {
+        id: uuidv4(),
         title: title,
-        url: img,
+        img: img,
         price: price
     }
     // const addCart = (id) => {
@@ -21,8 +23,9 @@ function Card({id, img, title, description, price, weight}) {
     // }  
 
     const handleAddProduct = () => {
-        console.log(item)
+        // console.log(item)
         dispatch(addProduct(item))
+        alert('Товар добавлен в корзину')
 
     }
  

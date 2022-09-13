@@ -10,15 +10,16 @@ const cartSlice = createSlice({
     },
     reducers: {
         addProduct(state, action){
-        console.log('addProduct')
-        }
+
+                },
+ 
     }
 
 })
 
-export const { addproduct } = cartSlice.action
+export const { addproduct } = cartSlice.actions
 
-export default cartSlice.reducers
+export default cartSlice.reducer
 
 // const initialState = {
 //     products,

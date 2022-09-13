@@ -1,8 +1,10 @@
 import './Cart.scss'
 // import MenuPage from './pages/MenuPage/MenuPage';
 import {Link} from "react-router-dom";
-// import {useDispatch} from 'react-redux'
+import {useDispatch} from 'react-redux'
 import {useSelector} from 'react-redux'
+import {removeProduct} from '../store/reducers/index'
+// import {removeProduct} from '../store/reducers/index'
 // import {Container, Row, Col, Card, Button} from 'react-bootstrap'
 // import {useParams} from 'react-router-dom'
 // let state = []
@@ -24,26 +26,44 @@ function Cart() {
   // const remCart = (id) => {
   //     dispatch({type: 'REM_CART', id})
   // }
-
+const dispatch = useDispatch()
 const cart = useSelector(state => state.cart.cart)
+
+const handleRemProduct = () => {
+  
+  // dispatch(removeProduct())
+
+  alert('Товар удален из корзины')
+
+}
+
+
 
 return(
 
   
   
-<div className={"basket"}>
+<div className={"cart"}>
   <header>
-    <h1 className={"basket__title"}>КОРЗИНА С ВЫБРАННЫМИ ТОВАРАМИ</h1>
+    <h1 className={"cart__title"}>КОРЗИНА С ВЫБРАННЫМИ ТОВАРАМИ</h1>
   </header>
 
   
 {cart.map(item => {
 const {img, title, price} = item
 return (
-  <div className='card'>{img} </div>,
-  <div>{title}</div>,
-  <div>{price}</div>
- 
+  <div className='cart__card'>
+    
+    <div className='cart__item-wrap'>
+    <div className='cart__item-image'><img src={img} alt='изображение товара'/></div>
+    <div className='cart__item-title'>{title}</div>
+    <div className='cart__price-wrap'>
+    <div className='cart__item-price'>{price}</div>
+    <img className='cart__delete-button' src='../../images/deleteElement.svg' onClick={handleRemProduct}></img>
+    
+    </div>
+    </div>
+ </div>
 )
 
 })}
@@ -69,10 +89,10 @@ return (
   <main>
 
   </main> 
-<div className='basket__footerLine'><hr></hr></div>
-<footer className={'basket__footer'}>
-<h2 className ={'basket__price'}>Заказ на сумму:<span></span></h2>
-<div className={'basket__wrap'}>
+<div className='cart__footerLine'><hr></hr></div>
+<footer className={'cart__footer'}>
+<h2 className ={'cart__price'}>Заказ на сумму:<span></span></h2>
+<div className={'cart__wrap'}>
     
     <button className={'basket__button'}>Оформить заказ</button>
     <p className={'basket__buttonBack'}><Link to='/'>Назад к выбору</Link></p>

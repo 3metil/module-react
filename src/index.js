@@ -3,29 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { Provider } from 'react-redux';
-// import { createStore } from 'redux'
 
 import store from './store'
 
 import reportWebVitals from './reportWebVitals';
 
-// const defaultState = {
-//   count: 0,
-//   basket: []
-// }
-
-// const reducer = (state = defaultState, action) => {
-//   switch(action.type) {
-//     case 'PLUS_COUNT':
-//       return {...state, count: state.count + action.payload}
-//     case 'MINUS_COUNT':
-//       return {...state, count: state.count - action.payload}
-//     default:
-//       return state
-//   }
-// } 
-
-// const store = createStore(reducer)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
