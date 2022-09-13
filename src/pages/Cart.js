@@ -21,23 +21,25 @@ function Cart() {
   // const id = params.id - 1
   // const cards = useSelector(state=> state.cards)
   
-  
-  
+    
   // const remCart = (id) => {
   //     dispatch({type: 'REM_CART', id})
   // }
 const dispatch = useDispatch()
-const cart = useSelector(state => state.cart.cart)
 
-const handleRemProduct = () => {
-  
-  // dispatch(removeProduct())
 
-  alert('Товар удален из корзины')
+
+const handleRemProduct = (item) => () => {
+  console.log('1')
+  // let id = item(id)
+  dispatch(removeProduct(item))
+  // console.log(id)
+
+  // alert('Товар удален из корзины')
 
 }
 
-
+const cart = useSelector(state => state.cart.cart)
 
 return(
 
@@ -59,7 +61,7 @@ return (
     <div className='cart__item-title'>{title}</div>
     <div className='cart__price-wrap'>
     <div className='cart__item-price'>{price}</div>
-    <img className='cart__delete-button' src='../../images/deleteElement.svg' onClick={handleRemProduct}></img>
+    <img className='cart__delete-button' src='../../images/deleteElement.svg' onClick={handleRemProduct(item)}></img>
     
     </div>
     </div>

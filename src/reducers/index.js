@@ -10,7 +10,7 @@ const cartSlice = createSlice({
     },
     reducers: {
         addProduct(state, action){
-
+    
                 },
  
     }
