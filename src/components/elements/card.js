@@ -18,10 +18,11 @@ function Card({id, img, title, description, price, weight}) {
         title: title,
         img: img,
         price: price
-        
+
         }
         dispatch(addProduct(item))
         alert('Товар добавлен в корзину')
+
 
     }
  

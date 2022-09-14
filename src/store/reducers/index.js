@@ -13,6 +13,19 @@ const cartSlice = createSlice({
         state.cart.push(action.payload)
         state.totalCost = state.cart.reduce((acc, val) => acc + Number(val.price), 0);
         state.count = state.cart.length;
+        state.prod = 'товар'
+        
+        if (state.count === 1) {
+            state.prod = 'товар'
+          } else if (state.count === 2 || state.count === 3 || state.count === 4) {
+            state.prod = 'товара'
+          } else if (state.count >= 5 && state.count <= 20) {
+            state.prod = 'товаров' }
+          else if (state.count > 20) {
+            state.prod = 'товаров'
+          }
+        
+
     },
         removeProduct(state, action) {
         
