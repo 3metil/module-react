@@ -44,7 +44,7 @@ function Card({id, img, title, description, price, weight}) {
         </p>
         
         <div className="card__add-wrap">
-        <div className="card__price">{price} / {weight}</div>
+        <div className="card__price">{price} ₽/ {weight}</div>
         <div className="card__add-button" onClick={handleAddProduct}>
         <svg width="30" height="30" viewBox="0 0 30 30" fill="#323232" xmlns="http://www.w3.org/2000/svg">
         <circle cx="15" cy="15" r="15" />

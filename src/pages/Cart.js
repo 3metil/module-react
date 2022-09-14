@@ -15,27 +15,14 @@ import {removeProduct} from '../store/reducers/index'
 
 
 function Cart() {
-  // const product = useSelector(state => state.cart)
-  // const dispatch = useDispatch() 
-  // const params = useParams()
-  // const id = params.id - 1
-  // const cards = useSelector(state=> state.cards)
-  
-    
-  // const remCart = (id) => {
-  //     dispatch({type: 'REM_CART', id})
-  // }
+
 const dispatch = useDispatch()
-
-
+const {Cart, totalCost} = useSelector(state => state.cart);
 
 const handleRemProduct = (item) => () => {
-  console.log('1')
-  // let id = item(id)
-  dispatch(removeProduct(item))
-  // console.log(id)
 
-  // alert('Товар удален из корзины')
+  dispatch(removeProduct(item))
+  
 
 }
 
@@ -60,7 +47,7 @@ return (
     <div className='cart__item-image'><img src={img} alt='изображение товара'/></div>
     <div className='cart__item-title'>{title}</div>
     <div className='cart__price-wrap'>
-    <div className='cart__item-price'>{price}</div>
+    <div className='cart__item-price'>{price} ₽</div>
     <img className='cart__delete-button' src='../../images/deleteElement.svg' onClick={handleRemProduct(item)}></img>
     
     </div>
@@ -93,7 +80,7 @@ return (
   </main> 
 <div className='cart__footerLine'><hr></hr></div>
 <footer className={'cart__footer'}>
-<h2 className ={'cart__price'}>Заказ на сумму:<span></span></h2>
+<h2 className ={'cart__price'}>Заказ на сумму: <span>{totalCost} ₽</span></h2>
 <div className={'cart__wrap'}>
     
     <button className={'basket__button'}>Оформить заказ</button>

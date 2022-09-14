@@ -10,17 +10,17 @@ const cartSlice = createSlice({
     },
     reducers: {
         addProduct(state, action) {
-        
         state.cart.push(action.payload)
-        },
+        state.totalCost = state.cart.reduce((acc, val) => acc + Number(val.price), 0);
+        state.count = state.cart.length;
+    },
         removeProduct(state, action) {
         
-        // console.log(state)
-        // console.log(state.cart)
-        // console.log(action)
-        
+
         state.cart = state.cart.filter((item) => item.id !== action.payload.id);
-        // console.log(state)
+        state.totalCost = state.cart.reduce((acc, val) => acc + Number(val.price), 0);
+        state.count = state.cart.length;
+        
         }
     }
 
