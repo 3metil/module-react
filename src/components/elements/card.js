@@ -9,21 +9,17 @@ import {v4 as uuidv4} from 'uuid'
 function Card({id, img, title, description, price, weight}) {
     const dispatch = useDispatch()  
 
-    let item = {
+    
+    
+    const handleAddProduct = () => {
+        
+        let item = {
         id: uuidv4(),
         title: title,
         img: img,
         price: price
-    }
-    // const addCart = (id) => {
         
-    //     console.log(id)
-    //     dispatch({type: 'ADD_CART', id})
-
-    // }  
-
-    const handleAddProduct = () => {
-        // console.log(item)
+        }
         dispatch(addProduct(item))
         alert('Товар добавлен в корзину')
 
