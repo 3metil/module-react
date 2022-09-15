@@ -22,8 +22,14 @@ const cartSlice = createSlice({
             state.prod = 'товара'
           } else if (state.count >= 5 && state.count <= 20) {
             state.prod = 'товаров' }
-          else if (state.count > 20) {
-            state.prod = 'товар*'
+          else if (state.count % 10 === 1 ) {
+            state.prod = 'товар'
+          } else if (state.count % 10 === 2) {
+            state.prod = 'товара'
+          } else if (state.count % 10 === 3) {
+            state.prod = 'товара'
+          } else if (state.count % 10 === 4) {
+            state.prod = 'товара'
           } else {
             state.prod = 'товаров'
           }

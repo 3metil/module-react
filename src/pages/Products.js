@@ -1,16 +1,11 @@
 import Card from '../components/elements/card.js'
 import {products} from '../menuList.js'
-import {Link} from "react-router-dom";
 import Header from '../header/Header.jsx'
-import {useDispatch} from 'react-redux'
-import {Button} from "react-bootstrap"
 
 
 
 function Products ({prop}) {
-const addPriceProduct =(price) => {
 
-}
 
   return (
 

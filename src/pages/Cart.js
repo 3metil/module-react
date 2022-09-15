@@ -25,7 +25,8 @@ return(
   
   
 <div className={"cart"}>
-  <header>
+  <header className='cart__header'>
+    <div className='cart__backButton'><Link to='/'><img src='../../images/cart-backButton.svg'></img></Link></div>
     <h1 className={"cart__title"}>КОРЗИНА С ВЫБРАННЫМИ ТОВАРАМИ</h1>
   </header>
 
@@ -55,12 +56,9 @@ return (
   </main> 
 <div className='cart__footerLine'><hr></hr></div>
 <footer className={'cart__footer'}>
-<h2 className ={'cart__price'}>Заказ на сумму: <span>{totalCost} ₽</span></h2>
-<div className={'cart__wrap'}>
-    
-    <button className={'basket__button'}>Оформить заказ</button>
-    <p className={'basket__buttonBack'}><Link to='/'>Назад к выбору</Link></p>
-</div>
+  <h2 className ={'cart__price'}>Заказ на сумму: <span>{totalCost} ₽</span></h2>
+  <button className={'cart__button'}>Оформить заказ</button>
+
   </footer>
 
 

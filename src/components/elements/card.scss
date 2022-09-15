@@ -18,22 +18,22 @@
     font-size: 31px;
 }
 
-.menu__basket {
+.menu__cart {
     width: 60vw;
     justify-content: flex-end;
     display: flex;
     height: 100%;
     
 }
-.basket-text {
+.cart-text {
     color: #000;
     display: flex;
     align-items: center;
     margin: 0px 20px 0px 0px;
 }
-.basket-text:hover {
-    color: #ffffff
-}
+// .cart-text:hover {
+//     color: #ffffff
+// }
 .card:hover{
     color: #D58C51;
     

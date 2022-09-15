@@ -5,10 +5,12 @@ body {
 
 .cart {
     &__title {
-        text-align: center;
+        display: flex;
+        justify-content: center;
         text-transform: uppercase;
         line-height: 38px;
         font-size: 31px;
+        width: 90vw;
     }
     &__item {
         &-wrap {
@@ -22,6 +24,19 @@ body {
             margin: 0px 15px 0px 0px;
         }
     }
+    &__header {
+        display: flex;
+        align-items: center;
+    }
+
+    &__backButton {
+        width: 10vw;
+        margin: 0px 0px 0px 20px;
+    }
+
+    &__price {
+        margin: 0px 0px 20px 20px;
+    }
 
     &__price-wrap {
         display: flex;
@@ -30,98 +45,19 @@ body {
         cursor: pointer;
 
     }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+    
+    }
+
+    &__button {
+        height: 42px;
+        width: 200px;
+        background: #D58C51;
+    }
 }
 
 
 
-// .cart {
-//     &__title {
-
-        
-//     }
-    
-//     &__list {
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//     }
-//     &__footer {
-//        color: #fff; 
-//        display: flex;
-//     }
-
-//     &__wrap {
-//         width: 60%;
-//         text-align: center;
-//         height: 80px;
-//         display: flex;
-//         justify-content: flex-end;
-        
-        
-//     }
-
-//     &__price {
-//         margin: 0px 0px 0px 150px;
-//     }
-//     &__button {
-//         background:#D58C51;
-//         color: #fff; 
-//         width: 180px;
-//         height: 50px;
-//         border-radius: 5px;
-//         margin: 0px 40px 0px 0px;  
-//     }
-//     &__buttonBack a{
-//         color: white; 
-//         text-decoration: none;  
-//     }
-//     &__footerLine {
-//         margin: 0px 0px 20px 0px;
-//     }
-// }
-
-// .cartCard {
-//     max-width: 1100px;
-//     width: 100%;
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     margin: 0px 0px 50px 0px;
-//     &__img {
-
-//     }
-//     &__title {
-//         padding: 0px 0px 0px 0px;
-//         margin: 0px 0px 0px 0px;
-
-//         font-weight: 500;
-//         font-size: 17px;
-//         line-height: 21px;
-//         font-weight: 500;
-//         font-size: 17px;
-//         line-height: 21px;
-//     }
-
-//     &__price {
-//         padding: 0px 20px 0px 0px;
-//         margin: 0px 0px 0px 0px;
-//         font-weight: 400;
-//         font-size: 18px;
-//         line-height: 22px;
-
-//         color: #D58C51;
-//     }
-//     &__button {
-//         background: none;
-//         border: none;
-//     }
-
-//     &__action {
-//         display: flex;
-//     }
-//     &__main {
-//         display: flex;
-//         align-items: center;
-//         gap: 70px;  
-//     }
-// }
