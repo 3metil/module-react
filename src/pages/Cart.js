@@ -15,7 +15,7 @@ const {Cart, totalCost} = useSelector(state => state.cart);
 const handleRemProduct = (item) => () => {
   
   dispatch(removeProduct(item))
-  
+  alert('Товар удален из корзины')
 }
 
 const cart = useSelector(state => state.cart.cart)
@@ -57,7 +57,7 @@ return (
 <div className='cart__footerLine'><hr></hr></div>
 <footer className={'cart__footer'}>
   <h2 className ={'cart__price'}>Заказ на сумму: <span>{totalCost} ₽</span></h2>
-  <button className={'cart__button'}>Оформить заказ</button>
+  <a href='https://google.ru'><button className={'cart__button'}>Оформить заказ</button></a>
 
   </footer>
 
