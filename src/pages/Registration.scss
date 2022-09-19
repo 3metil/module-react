@@ -1,0 +1,84 @@
+body {
+    background-image: url(../../public/images/entregBackground.png);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    width: 100%;
+}
+
+p {
+    height: 35px;
+    border: none;
+    margin: 0, auto;
+}
+
+.form-registration {
+background-color: #fff;
+color: #301411;
+width: 460px;
+height: 430px;
+
+
+
+&__label {
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: #161516;
+    text-align: center;
+    padding: 36px 0px 15px 0px;
+}
+
+&__checkbox-wrap {
+    align-items: center;
+    margin: 0px 0px 0px 20px;
+    display: flex;
+}
+
+&__login {
+    border: 1px solid #D58C51;
+    border-radius: 61px;
+    width: 420px;
+    margin: 0px 0px auto 0px;
+    line-height: 39px; 
+
+}
+
+&__input-wrap {
+    width: 100%;
+    text-align: center;
+    
+}
+
+&__password {
+    border: 1px solid #D58C51;
+    border-radius: 61px;
+    width: 420px;
+    margin: 0px 0px auto 0px;
+    line-height: 39px;
+    position: relative;
+    z-index: 4;
+}
+
+
+&__input-button {
+    width: 200px;
+    height: 42px;
+    background: #D58C51;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    border: none;
+    color: #131313;
+
+}
+
+&__input-wrap {
+    width: 100%;
+    margin: 0 auto;
+
+}
+}
