@@ -1,6 +1,7 @@
 import React from 'react';
 import {Col, Container, Nav, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import './Home.scss'
 
 const Home = () => {
     return (
@@ -17,6 +18,9 @@ const Home = () => {
                               </Nav.Item>
                               <Nav.Item as="li">
                               <Link to='/cart'>Cart</Link>
+                              </Nav.Item>
+                              <Nav.Item as="li">
+                              <Link to='/registration'>Registration</Link>
                               </Nav.Item>
                         </Nav>
                     </Col>

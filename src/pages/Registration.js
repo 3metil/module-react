@@ -26,7 +26,8 @@ const onSubmit = (data) => {
 }
 
 return (
-<div className='form-registration'>
+<div className='form-registration__page-wrap'>
+<div className='form-registration__page'>
     
 <h1 className='form-registration__label'>Регистрация</h1>
 <form onSubmit={handleSubmit(onSubmit)}>
@@ -78,7 +79,7 @@ return (
     </div>
 </form>
 </div>
-
+</div>
 )
 }
 
