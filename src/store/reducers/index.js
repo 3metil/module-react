@@ -6,7 +6,8 @@ const cartSlice = createSlice({
     initialState: {
         cart: [],
         totalCost: 0,
-        count: 0 + ' товаров'
+        count: 0 + ' товаров',
+
     },
     reducers: {
         addProduct(state, action) {
@@ -14,7 +15,7 @@ const cartSlice = createSlice({
         state.totalCost = state.cart.reduce((acc, val) => acc + Number(val.price), 0);
         state.count = state.cart.length;
         state.prod = 'товаров'
-        console.log(state.prod)
+        
 
           if (state.count === 0) {
             state.prod = 'товаров'
@@ -23,8 +24,8 @@ const cartSlice = createSlice({
           } else if (state.count === 2 || state.count === 3 || state.count === 4) {
             state.prod = 'товара'
           } else if (state.count >= 5 && state.count <= 20) {
-            state.prod = 'товаров' }
-          else if (state.count % 10 === 1 ) {
+            state.prod = 'товаров' 
+          } else if (state.count % 10 === 1 ) {
             state.prod = 'товар'
           } else if (state.count % 10 === 2) {
             state.prod = 'товара'
@@ -71,6 +72,8 @@ const cartSlice = createSlice({
     }
 
 })
+
+
 
 export const { addProduct } = cartSlice.actions
 export const { removeProduct } = cartSlice.actions

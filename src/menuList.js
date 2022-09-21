@@ -1,11 +1,12 @@
 import {useParams} from 'react-router-dom'
 import {useSelector} from 'react-redux'
 
-const ProductItem = () => {
+const ProductsItem = () => {
   const params = useParams()
   const id = params.id - 1
   const cards = useSelector(state=> state.cards)
   const product = cards[id]
+  console.log(product)
   return id
 }
 
@@ -77,3 +78,5 @@ export const products = [
     "img":"../images/8.png"
   },
 ]
+
+export default ProductsItem 
