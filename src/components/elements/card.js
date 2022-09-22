@@ -3,13 +3,14 @@ import {useDispatch} from 'react-redux'
 import {useSelector} from 'react-redux'
 import {addProduct} from '../../store/reducers/index'
 import {v4 as uuidv4} from 'uuid'
-
-
+import { Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 function Card({id, img, title, description, price, weight}) {
     const dispatch = useDispatch()  
-
-    
+    const params = id
+    const navigate = useNavigate()
     
     const handleAddProduct = () => {
         
@@ -31,7 +32,7 @@ function Card({id, img, title, description, price, weight}) {
         
         <div className="card">
         <div className="card__preview-wrap">
-        <img className='card-preview' src={img} alt="" />
+        <img className='card-preview' onClick={() => navigate('/' + params)} src={img} alt="" />
         </div>
         <div className="card__text-wrap">
         <h2 className="card__title">{title}</h2>
