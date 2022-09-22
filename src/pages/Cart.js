@@ -28,6 +28,7 @@ return(
   <header className='cart__header'>
     <div className='cart__backButton'><Link to='/'><img src='../../images/cart-backButton.svg'></img></Link></div>
     <h1 className={"cart__title"}>КОРЗИНА С ВЫБРАННЫМИ ТОВАРАМИ</h1>
+    <Link to='/enterance'><div className='cart__enterance-button'>Войти</div></Link>
   </header>
 
   

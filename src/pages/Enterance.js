@@ -5,10 +5,11 @@ import {useForm, useWatch} from 'react-hook-form'
 import Checkbox from '@material-ui/core/Checkbox';
 import CircleCheckedFilled from '@material-ui/icons/CheckCircle';
 import CircleUnchecked from '@material-ui/icons/RadioButtonUnchecked';
-
-
+import {Link} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 export default function Enterance () {
-const {
+const navigate = useNavigate()
+    const {
     register,
     formState: {
         errors, isValid 
@@ -25,15 +26,18 @@ const onSubmit = (data) => {
    let password =  JSON.stringify(data.password)
    let passwordStorage = localStorage.getItem(JSON.stringify(data.login))
    if (password === passwordStorage) {
-    alert('success')
+    {navigate(-1)}
+
    } else {
-    alert('fail')
+    alert('Неправильный логин или пароль')
    }
 }
 return (
-<div className='form-enterance__page-wrap'>
-<div className='form-enterance__page'>
     
+<div className='form-enterance__page-wrap'>
+
+<div className='form-enterance__page'>
+<Link to='/registration'><div className='form-enterance__registration-link'>Зарегистрироваться</div></Link>
 <h1 className='form-enterance__label'>Вход</h1>
 <form onSubmit={handleSubmit(onSubmit)}>
 

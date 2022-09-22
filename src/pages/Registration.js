@@ -5,7 +5,7 @@ import {useForm, useWatch} from 'react-hook-form'
 import Checkbox from '@material-ui/core/Checkbox';
 import CircleCheckedFilled from '@material-ui/icons/CheckCircle';
 import CircleUnchecked from '@material-ui/icons/RadioButtonUnchecked';
-
+import { Link } from 'react-router-dom';
 
 export default function Registration () {
 const {
@@ -28,7 +28,8 @@ const onSubmit = (data) => {
 return (
 <div className='form-registration__page-wrap'>
 <div className='form-registration__page'>
-    
+<Link to='/enterance'><div className='form-enterance__registration-link'>Войти</div></Link>
+   
 <h1 className='form-registration__label'>Регистрация</h1>
 <form onSubmit={handleSubmit(onSubmit)}>
 

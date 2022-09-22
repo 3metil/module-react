@@ -1,3 +1,26 @@
 .menu__link {
     margin: 0px 10px 0px 0px;
 }
+.header__enterance-button {
+    width: 200px;
+    height: 42px;
+    border: 1px solid #D58C51;
+    background-color: #161516;
+    color:#D58C51;
+    cursor: pointer;
+
+}
+
+.header {
+&__cart-wrap {
+    display: flex;
+    justify-content: flex-end;
+    width: 60vw;
+}
+&__wrap {
+width: 140px;
+}
+    }
+.menu__cart {
+    width: 100px;
+}

@@ -49,7 +49,17 @@ body {
         motion-rotation: 90deg;
         
     }
-
+    &__enterance-button {
+        width: 200px;
+        height: 42px;
+        border: 1px solid #D58C51;
+        background-color: #161516;
+        color:#D58C51;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
 
     &__footer {
