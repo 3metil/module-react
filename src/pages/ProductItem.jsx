@@ -31,8 +31,8 @@ const ProductItem = () => {
     }
     return (
                 <><Header />
-                <div className='card-container'>
-                <div className="card">
+                <div className='card-one__container'>
+                <div className="card-one">
                 
                 <div className="card__preview-wrap">
                 <img className='card-preview' src={menu[0].img} alt="" />
@@ -46,7 +46,7 @@ const ProductItem = () => {
                 
                 <div className="card__add-wrap">
                 <div className="card__price">{menu[0].price} ₽/ {menu[0].weight}</div>
-               <button className="card__add-button" onClick={handleAddProduct}>Добавить в корзину</button>
+               <button className="card-one__add-button" onClick={handleAddProduct}>Добавить в корзину</button>
                </div>
                 </div></div></div></>
         

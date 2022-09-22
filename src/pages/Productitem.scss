@@ -1,4 +1,4 @@
-.card {
+.card-one {
     border: solid 1px 
     #D58C51;
     height: 552px;
@@ -7,7 +7,7 @@
     width: 400px;
     align-items: center;
 
-    &-container {
+    &__container {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -68,7 +68,7 @@
     align-items: baseline;
     
 }
-.card__add-button {
+.card-one__add-button {
 
     display: flex;
     justify-content: center;
