@@ -1,0 +1,92 @@
+.card {
+    border: solid 1px 
+    #D58C51;
+    height: 552px;
+    display: grid;
+    grid-template-rows: 55% 45%;
+    width: 400px;
+    align-items: center;
+
+    &-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.header {
+    display: flex;
+}
+
+.header h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 31px;
+}
+
+.menu__cart {
+    width: 60vw;
+    justify-content: flex-end;
+    display: flex;
+    height: 100%;
+    
+}
+.cart-text {
+    color: #000;
+    display: flex;
+    align-items: center;
+    margin: 0px 20px 0px 0px;
+}
+
+.card:hover{
+    color: #D58C51;
+    
+}
+.card:hover svg{
+    fill:#D58C51;
+    
+}
+
+.card__preview-wrap {
+    text-align: center;
+    margin: 40px 0px 0px 0px;
+
+}
+
+
+
+.card__text-wrap {
+    margin: 0px 0px 0px 25px;
+    height: 210px;
+    display: grid;
+    grid-template-rows: 50% 45% 5%;
+}
+
+.card__add-wrap {
+    display: flex;
+    align-items: baseline;
+    
+}
+.card__add-button {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    margin: 0px 20px 70px 0px;
+    padding: 10px 0px 10px 0px;
+    cursor: pointer;
+    background-color: #D58C51;
+    color: #fff;
+    border-radius: 5px;
+
+}
+.card__price {
+    width: 50%;
+    margin: 0px 0px 20px 0px;
+}
+.card__add-button svg:hover{
+fill:#D58C51;
+}
