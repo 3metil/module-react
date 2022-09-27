@@ -12,6 +12,7 @@ function Card({id, img, title, description, price, weight}) {
     const params = id
     const navigate = useNavigate()
     console.log(params)
+    
     const handleAddProduct = () => {
         
         let item = {

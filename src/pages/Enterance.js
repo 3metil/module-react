@@ -26,7 +26,8 @@ const onSubmit = (data) => {
    let password =  JSON.stringify(data.password)
    let passwordStorage = localStorage.getItem(JSON.stringify(data.login))
    if (password === passwordStorage) {
-    {navigate(-1)}
+    
+    alert('Вы успешно вошли!')
 
    } else {
     alert('Неправильный логин или пароль')
